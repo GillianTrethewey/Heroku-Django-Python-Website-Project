@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}
+Resources
+{% endblock title %}
+{% block content %}
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="resources" class="">
+      <div class="section-title">
+        <h2>Resources Database</h2>
+      </div>
+        <div class="container">
+
+        {% for resource in resources %}
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold ">Resource: {{ resource.title }}</h6>
+            </div>
+            <div class="card-body">
+              <a href=" {{ resource.html_url }} " target = "_blank"> {{ resource.body }} </a>
+            </div>
+          </div>
+        {% endfor %}
+
+      </div>    
+    </section>
+ 
+
+  </main><!-- End #main -->
+{% endblock content %}

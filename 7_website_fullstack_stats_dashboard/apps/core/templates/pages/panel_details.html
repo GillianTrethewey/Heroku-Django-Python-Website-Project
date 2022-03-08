@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Panel Details
+{% endblock title %}
+
+{% block content %}
+
+    <h2>{{ panel.repo_name }}</h2>
+
+	<div class="shadow border">
+        {{ rendered_chart_svg | safe }}
+    </div>
+
+
+{% endblock content %}

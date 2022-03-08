@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}
+GitHub
+{% endblock title %}
+{% block content %}
+
+    <main id="main">
+
+    <!-- ======= GitHub API Section ======= -->
+    <section id="github" class="github">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>GitHub Repositories</h2>
+        </div>
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <div class="col-xl-8 col-lg-7">
+
+                            {% for repo in github_repos %}
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">GitHub Repository ID: {{ repo.id }}</h6>
+                                </div>
+                                <div class="card-body">
+                                  <a href=" {{ repo.html_url }} " target = "_blank"> {{ repo.name }} </a>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+
+
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+{% endblock content %}

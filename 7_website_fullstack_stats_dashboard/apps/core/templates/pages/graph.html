@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Graph
+{% endblock title %}
+
+{% block content %}
+
+{{ line_chart | safe}}
+
+{% endblock content %}

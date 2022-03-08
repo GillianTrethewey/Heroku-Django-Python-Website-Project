@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3">
+  <h1 class="display-4">Gillian's GitHub Stats</h1>
+  <p class="lead">This is a simple app built with Django to display my GitHub stats.</p>
+  <hr class="my-4">
+  <p>Hello and welcome! I'm Gillian Trethewey. I am an active coder working on larger projects to solidify my learning.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Learn more</a>
+  </p>
+</div>
+
+<p></p>
+
+{% endblock content %}
+
+

@@ -1,0 +1,87 @@
+
+
+  <main id="main">
+
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="row text-center">
+          <div class="col-lg-8 mx-auto"><a class="category-link mb-3 d-inline-block" href="#">Python</a>
+            <h1>MadLib Exercise Using Python</h1>
+            <p>Practice static exercise using Python string Template.</p>
+            <ul class="list-inline mb-5">
+              <li class="list-inline-item mx-2"><a class="text-uppercase text-muted reset-anchor" href="#">BY Gillian Trethewey</a></li>
+              <li class="list-inline-item mx-2"><a class="text-uppercase text-muted reset-anchor" href="#">14 Sep 2021</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <img class="col-lg-8 img-fluid d-block" src="assets/img/portfolio/kickstart-coding-data-project-2-feature.jpg" alt="...">
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <p>Here is a simple exercise to show how the template works for a static game of MadLibs. You could expand this exercise to have the user input each item as well.</p>
+            <section>
+              <h3>Set Up the Python File "madlib_build.py":</h3>
+              <p>The Python string Template is created by passing the template string to its constructor. It supports $-based substitutions. Here I'm using the   template.safe_substitute method so that a KeyError is not thrown if a key is missing.</p>
+
+              <pre>
+
+                from string import Template
+                madlib_template_text = open('madlib_template.html').read()
+                template = Template(madlib_template_text)
+
+                mathlib_html = template.safe_substitute(
+                    title="Hallowe'en",
+                    plural_noun_1 = "pencils",
+                    plural_noun_2 = "bananas",
+                    plural_noun_3 = "cigars",
+                    noun_1 = "grandfather clock",
+                    noun_2 = "moped",
+                    noun_3 = "scissors",
+                    noun_4 = "eraser",
+                    verb_1 = "dance",
+                    verb_2 = "cook",
+                    adverb_1 = "slowly",
+                )
+                open('madlib.html', 'w+').write(madlib_html)
+              </pre>
+            </section>
+            <section>
+             <h3>Set Up the HTML Template Page "madlib_template.html"</h3>
+              <p>I used Bootstrap for an easy display method. You'll notice that each variable maps/substitutes for each respective <code>${item-name}</code>. For example, the <code>&{title}</code> relates to <code>title = "Hallowe'en"</code> in the Python file.</p>
+              <pre>
+                                <!DOCTYPE html>
+                &lt;html lang="en"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="utf-8"/&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1"/&gt;
+
+                    &lt;title>${title} - Mad Lib&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"&gt;
+
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                    &lt;div class="container"&gt;
+                      &lt;div class="row"&gt;
+                        &lt;div class="col"&gt;
+                            &lt;h1&gt;${title} - Mad Lib&lt;/h1&gt;
+                         &lt;/div&gt;
+
+                        &lt;div class="col-sm-8"&gt;
+                            &lt;p>Hallowe'en is my favourite holiday, because we get to dress up in ${plural_noun_1} and visit ${plural_noun_2} in our ${noun_1} saying "${noun_2} or ${noun_3}!"&lt;/p&gt;
+                            &lt;p>I also love to ${verb_1} ${plural_noun_3} for hallowe'en! I use special carving tools to ${adverb_1} ${verb_2} a face into my ${noun_4}.&lt;/p&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                  &lt;/body&gt;
+                  &lt;/html&gt;
+              </pre>
+            </section>
+            <section>
+              <p>I hope you have some fun with this exercise to reinforce the Python String Template concepts! If you want to just copy my repo to try it yourself, here is the link: <a href="https://github.com/GillianTrethewey/madlib_template">MadLib Template</a></p>
+            </section>
+          </div>
+        </div>
+      </div>
+  </section>
+</main>

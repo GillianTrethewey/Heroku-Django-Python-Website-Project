@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Panels
+{% endblock title %}
+
+{% block content %}
+
+{% for panel in all_panels %}
+    <div class="shadow border"> <!-- Example HTML / CSS -->
+        <h4>{{ panel.repo_name }}</h4>
+        <a href="/panel_details/{{ panel.id }}/">Click for more</a> 
+    </div>
+{% endfor %}
+
+{% endblock content %}

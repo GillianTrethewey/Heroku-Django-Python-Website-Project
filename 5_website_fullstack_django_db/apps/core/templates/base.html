@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>
+        {% block title %}
+            Gillian
+        {% endblock title %}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+
+
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/signinform.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'favicon.png' %}"/>
+          <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;500i;600;600i&family=Open+Sans:wght@600;700;600i;700i&family=Poppins:wght@600;700;600i;700i&display=swap" rel="stylesheet">
+  </head>
+
+ <!-- 
+  =======================================================
+  * Template Name: Gillian - v1.0.0
+  * Template URL: https://cognitiveresults.com/
+  * Author: Gillian Trethewey
+  ======================================================= 
+-->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">Gillian</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul id = "navigation">
+          <li class="{% if active_tab == 'home' %}active{% endif %}"><a href= "{% url 'home' %}">Home</a></li>
+          <li class="{% if active_tab == 'about' %}active{% endif %}"><a href= "{% url 'about' %}">About</a></li>
+          <li class="{% if active_tab == 'resources' %}active{% endif %}"><a href= "{% url 'resources' %}">Resources DB</a></li>
+          <li class="{% if active_tab == 'resume' %}active{% endif %}"><a href= "{% url 'resume' %}">Resume</a></li>
+          <li class="{% if active_tab == 'portfolio' %}active{% endif %}"><a href= "/portfolio/">Portfolio</a></li>
+          <li class="{% if active_tab == 'blog_archive' %}active{% endif %}"><a href= "/blog-archive/">Blog</a></li>
+          <li class="{% if active_tab == 'services' %}active{% endif %}"><a href= "/services/">Services</a></li>
+          <li class="{% if active_tab == 'contact' %}active{% endif %}"><a href= "/contact/">Contact</a></li>
+          <li class="{% if active_tab == 'github' %}active{% endif %}"><a href= "/github/">GitHub API</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="https://www.linkedin.com/in/gillian-trethewey-930585216/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="https://github.com/GillianTrethewey" class="github"><i class="bi bi-github"></i></i></a>
+      </div>
+
+    </div>
+
+  </header><!-- End Header -->
+    <div class="content">
+    {% block content %}
+    {% endblock content %}
+    </div>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+    <div class="container">
+    <div class="copyright">
+        &copy; Copyright <span>Gillian Trethewey</span>. All Rights Reserved
+    </div>
+    </div>
+    </footer><!-- End  Footer -->
+
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+  </body>
+</html>
+
